@@ -12,7 +12,7 @@ resource "aws_lb_target_group" "app_tg" {
   name     = "app-target-group"
   port     = var.server_port
   protocol = "HTTP"
-  vpc_id   = data.aws_vpc.main_subnet.id
+  vpc_id   = data.aws_vpc.main_vpc.id
 
   health_check {
     interval            = 30
