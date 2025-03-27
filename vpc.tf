@@ -8,6 +8,13 @@ resource "aws_vpc" "main_vpc" {
   }
 }
 
+data "aws_vpc" "main_vpc" {
+  filter {
+    name   = "tag:Name"
+    values = ["main_vpc"]  # This should match the Name tag in your VPC resource
+  }
+}
+
 #subnet
 resource "aws_subnet" "main_subnet" {
     vpc_id = aws_vpc.main_vpc.id
