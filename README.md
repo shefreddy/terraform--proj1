@@ -39,9 +39,14 @@ Before deploying this project, ensure you have the following installed:
 
 ## **Project Structure**
 ```
-terraform-aws-autoscaling-alb/
+terraform-concepts-proj1/
 │── main.tf                # Main Terraform configuration file
 │── variables.tf           # Variables for Terraform
+│── autoscaling.tf         # Auto Scaling group & Policies
+│── EC2.tf                 # EC2 instance configuration file
+│── ALB.tf                 # Applicatin Load Barancer configuration file
+│── SG.tf                  # Security group
+│── VPC.tf                 # VPC instance configuration file
 │── outputs.tf             # Output values
 │── README.md              # Documentation
 ```
@@ -52,8 +57,8 @@ terraform-aws-autoscaling-alb/
 
 ### **Step 1: Clone the Repository**
 ```sh
-git clone https://github.com/ryan-almeida/terraform-concepts-project
-cd terraform-concepts-project
+git clone https://github.com/shefreddy/terraform--proj1.git
+cd terraform--proj1
 ```
 
 ### **Step 2: Initialize Terraform**
